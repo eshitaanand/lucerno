@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buy Now</title>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+        
+    <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary: #c89d4b;
+      --dark: #1a1a1a;
+      --light: #f8f8f8;
+    }
+
+    
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .product-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .product-img img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-info {
+      flex: 1;
+    }
+
+    .product-info h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .product-info p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+
+     
+
+    .quantity-box {
+      display: flex;
+      align-items: center;
+       background: #fff; 
+      border: 1px solid gray;
+      border-radius: 8px;
+      overflow: hidden;
+      width: max-content;
+      margin-bottom: 20px;
+    }
+
+    .quantity-box button {
+    background-color: transparent;
+      border: 1px solid gray;
+      color: black;
+      font-size: 20px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    
+    .quantity-box input {
+      width: 60px;
+      text-align: center;
+      border: none;
+      font-size: 16px;
+      padding: 10px;
+      outline: none;
+      appearance: textfield;
+    }
+
+    /* .quantity-box input::-webkit-outer-spin-button,
+    .quantity-box input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    } */
+
+    @media (max-width: 600px) {
+      .quantity-box input {
+        width: 45px;
+      }
+    }
+
+    .buy-btn {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background-color: #a77d35;
+    }
+
+    /* 🔥 Responsive Media Queries */
+    @media (max-width: 992px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .product-info, .product-img {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .product-info h1 {
+        font-size: 1.5rem;
+      }
+
+      .buy-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+ <div class="top-bar">
+    <p>Complimentary Gift with Purchase Orders Over $750</p>
+    <p>Celebrating 20 Years of Style. Discover The Garden & New Arrivals.</p>
+    <p><span>📩</span> Subscribe To Newsletter 10% Off First Order</p>
+  </div>
+
+  <header class="main-header">
+    <div class="currency">
+      <select>
+        <option value="usd">IND &#8377
+        </option>
+        <option value="usd">USD $</option>
+        <option value="eur">EUR €</option>
+      </select>
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <div class="logo" onclick="window.location.href='index.html'">
+      <img src="ChatGPT Image May 7, 2025, 06_58_07 PM-Photoroom.png" alt="Lucerno Logo" />
+    </div>
+
+    
+
+    <div class="icons">
+      <span><i onclick="window.location.href='login.html'" class="fa-regular fa-user"></i></span>
+      <span><i class="fa-regular fa-heart"></i></span>
+      <span><i class="fa-solid fa-magnifying-glass"></i></span>
+      <span><i class="fa-solid fa-briefcase"></i></span>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-links" id="navLinks">
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <ul>
+        <li><a href="#">New Arrivals</a></li>
+        <li class="dropdown">
+          <a href="#">Dinnerware</a>
+         
+        </li>
+        <li><a href="#">Décor</a></li>
+        <li class="dropdown">
+          <a href="#">Apothecary + Fragrance</a>
+         
+        </li>
+        <li><a href="#">Gifts</a></li>
+        <li><a href="#">Trade + Services</a></li>
+        <li><a href="#">Brand</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+  <div class="container">
+    <div class="product-img">
+      <img src="IMG_3221-800x800.webp" alt="Product">
+    </div>
+    <div class="product-info">
+      <h1>Service Bowl</h1>
+      <p>Crafted to serve with style, this ceramic bowl is the perfect blend of elegance and utility for modern dining.</p>
+      <div class="price">₹1,299</div>
+       <!-- <div class="quantity">
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" min="1" value="1">
+      </div> -->
+
+      <div class="quantity-box">
+    <button onclick="changeQty(-1)">−</button>
+    <input type="number" id="qty" value="1" min="1" />
+    <button onclick="changeQty(1)">+</button>
+  </div>
+       
+      <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+    </div>
+  </div>
+
+
+  <h2 class="section-title">NEW ARRIVALS</h2>
+
+  <div class="product-grid">
+    <div class="product-card" onclick="window.location.href='triangle.html'">
+      <div class="product-image-wrapper">
+        <img src="umbra-collection-9-Photoroom.png" alt="Blindfold 100ml" />
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product-info">
+        <p class="product-title">Triangular Platter</p>
+        <p class="product-price">₹1,299</p>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="window.location.href='cup.html'">
+      <div class="product-image-wrapper">
+        <img style="width: 65%;" src="homepage-floraison-collection-Photoroom.png" alt="Blindfold 50ml" />
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product-info">
+        <p class="product-title">Cup & Saucer</p>
+        <p class="product-price">₹1,299</p>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="window.location.href='sagara.html'">
+      <div class="product-image-wrapper">
+        <span class="badge">Exclusive</span>
+        <img style="width: 73%;" src="homepage-sagara-collection-Photoroom.png" alt="Exclusive Candle" />
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product-info">
+        <p class="product-title">Sagara Plate</p>
+        <p class="product-price">₹1,299</p>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="window.location.href='bowl.html'">
+      <div class="product-image-wrapper">
+        <img src="IMG_3221-800x800-Photoroom.png" alt="Longhorn Bottle Opener" />
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product-info">
+        <p class="product-title">Service Bowl</p>
+        <p class="product-price">₹1,299</p>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- footer -->
+<footer id="footer">
+
+  <div class="footer-top">
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+
+          <img onclick="window.location.href='index.html'" style="width: 70%;" src="ChatGPT Image May 7, 2025, 06_58_07 PM-Photoroom.png" alt="logo">
+          <p>
+            New Delhi <br>
+          
+          </p>
+          <strong>Phone:</strong>+910123456789<br>
+          <strong>Email:</strong> info@lucerno.in<br>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <!-- <h4>Usefull Links</h4> -->
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Brand</a></li>
+            <li><a href="terms.html">Terms of service</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+
+
+
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <!-- <h4>Our Services</h4> -->
+          <ul>
+            <li><a href="#">Arkha Collection</a></li>
+            <li><a href="#">Bicro Collection</a></li>
+            <li><a href="#">Epoch Collection</a></li>
+            <li><a href="#">Kalima Collection</a></li>
+            <li><a href="#"></a>Kalimba Collection</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Social Networks</h4>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, quibusdam.</p> -->
+
+          <div class="socail-links mt-3">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+     
+
+    </div>
+  </div>
+  <hr>
+  <div class="container-fluid py-4">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Lucerno Beyond The Ordinary Table</span></strong>. All Rights Reserved
+    </div>
+
+  </div>
+</footer>
+<!-- footer -->
+
+
+<a href="https://wa.me/919924559980?text=Hi%20I%20am%20interested%20in%20your%20ceramics" class="arrow" target="_blank"><i><img  style="width: 70px;" src="whatsapp_11378621.png" alt="arrow"></i></a>
+
+
+
+  <script>
+    function buyNow() {
+      const qty = document.getElementById("qty").value;
+      alert(`Thank you for your purchase!\nQuantity: ${qty}`);
+      // You can redirect to payment gateway here
+      // window.location.href = "payment-page.html";
+    }
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
