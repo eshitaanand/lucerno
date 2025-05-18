@@ -1,3 +1,4 @@
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +19,6 @@ body {
 }
 
 .main-header {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,8 +34,9 @@ body {
   color: white;
 }
 
-.logo img {
+#logo img {
   height: 50px;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -79,28 +80,7 @@ body {
   position: relative;
 }
 
-.dropdown-menu {
-  position: absolute;
-  display: none;
-  flex-direction: column;
-  background-color: white;
-  padding: 10px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  top: 100%;
-}
 
-.dropdown:hover .dropdown-menu {
-  display: flex;
-}
-
-.dropdown-menu li {
-  padding: 8px 20px;
-  white-space: nowrap;
-}
-
-.dropdown-menu li:hover {
-  background-color: #f0f0f0;
-}
 
 /* Overlay and Side Menu for Mobile */
 .overlay {
@@ -134,21 +114,45 @@ body {
   .carousel-inner .carousel-item{
   height: 250px;
 }
+#logo img{
+  height: 35px;
+}
+.icons span{
+  font-size: 15px;
+  margin-left: 10px;
+  right: 0;
+}
+.currency select {
+  font-size: 13px;
+  padding: 0;
+ 
+}
+.hamburger{
+  font-size: 15px;
+}
+.main-header {
+  height: 40px;
+  gap: 2px;
+}
+.top-bar {
+  
+    font-size: 5px;
+}
 
 }
 @media screen and (max-width: 1024px) {
   .top-bar {
-    flex-direction: row-reverse;
+    flex-direction: row;
     text-align: center;
     font-size: 11px;
   }
 
   .main-header {
     flex-direction: row;
-    gap: 10px;
+   
   }
 .main-header .icons{
-  flex-direction: column;
+  flex-direction: row;
 }
   .hamburger {
     display: block;
@@ -159,7 +163,7 @@ body {
     top: 0;
     left: 0;
     background-color: rgb(7, 78, 66);
-    width: 250px;
+    width: 350px;
     height: 100vh;
     transform: translateX(-100%);
     z-index: 1000;
@@ -247,8 +251,104 @@ body {
 }
 /* Default desktop size */
 
-
-
+/* cookie and newsletter popup */
+.modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: rgb(7, 78, 66);
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+    #modal-content {
+      background: rgb(7, 78, 66);
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+    .logo {
+      width: 180px;
+      margin-bottom: 1rem;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30%;
+    }
+    .buttons button {
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #accept-btn {
+      background: white;
+      color: black;
+    }
+    #prefs-btn {
+      border: 1px solid white;
+      background: rgb(7, 78, 66);
+      color: white;
+    }
+    .newsletter-img {
+      width: 80%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+    .email-input {
+      width: 90%;
+      padding: 0.6rem;
+      margin: 1rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .subscribe-btn {
+      background: #000;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      font-weight: bold;
+      width: 90%;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    @media screen and (min-width: 768px) {
+      .modal-content {
+        max-width: 500px;
+      }
+    
+    }
+    @media screen and (min-width: 1024px) {
+      .modal-content {
+        max-width: 600px;
+      }
+    }
 
 /* Media Query for Tablets (iPad: width <= 1024px) */
 @media (max-width: 1024px) {
@@ -278,19 +378,19 @@ body {
  
  .text-center .image-overflow img{
   height: 400px;
-  width: 390px;
+  width: 380px;
   margin-top: 10px;
 }
 .text-center .image-overflow1 img{
   height: 480px;
-  width: 422px;
-  margin-left: -20px;
+  width: 380px;
+  
   margin-top: 10px;
 }
 .text-center .image-overflow1 video{
   height: 480px;
-  width: 422px;
- margin-left: -20px;
+  width: 380px;
+ 
   margin-top: 10px;
 }
 

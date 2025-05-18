@@ -59,3 +59,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (value < 1) value = 1;
       qtyInput.value = value;
     }
+
+   const acceptBtn = document.getElementById('accept-btn');
+    const cookieBanner = document.getElementById('cookie-banner');
+    const newsletterModal = document.getElementById('newsletter-modal');
+    const closeNewsletter = document.getElementById('close-newsletter');
+
+    acceptBtn.addEventListener('click', () => {
+      cookieBanner.style.display = 'none';
+      newsletterModal.style.display = 'flex';
+    });
+
+    closeNewsletter.addEventListener('click', () => {
+      newsletterModal.style.display = 'none';
+    });
+
+
+    
